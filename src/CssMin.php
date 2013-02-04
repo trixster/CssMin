@@ -4588,7 +4588,7 @@ class CssAtKeyframesParserPlugin extends aCssParserPlugin
 			$this->atRuleName = "-o-keyframes";
 			$this->parser->pushState("T_AT_KEYFRAMES::NAME");
 			$this->parser->clearBuffer();
-			return $index + 18;
+			return $index + 13;
 		}
 		// Start of @keyframes at-rule block (@-ms-keyframes)
 		elseif ($char === "@" && $state === "T_DOCUMENT" && strtolower(substr($this->parser->getSource(), $index, 14)) === "@-ms-keyframes")
@@ -4596,7 +4596,7 @@ class CssAtKeyframesParserPlugin extends aCssParserPlugin
 			$this->atRuleName = "-ms-keyframes";
 			$this->parser->pushState("T_AT_KEYFRAMES::NAME");
 			$this->parser->clearBuffer();
-			return $index + 18;
+			return $index + 14;
 		}
 		// Start of @keyframes rulesets
 		elseif ($char === "{" && $state === "T_AT_KEYFRAMES::NAME")
